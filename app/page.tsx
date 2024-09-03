@@ -1,18 +1,22 @@
 /* eslint-disable @next/next/no-img-element */
 import SparklesText from "@/components/magicui/sparkles-text";
 import Meteors from "@/components/magicui/meteors";
+
 export default function Home() {
   return (
     <section className="text-gray-600 body-font">
       <div className="container mx-auto">
-        <div className="flex flex-row space-x-5 items-center justify-center -mt-16 text-center w-full h-[100vh]">
+        <div className="flex flex-col space-x-5 items-center justify-center -mt-16 text-center w-full h-[100vh]">
           <Meteors number={50} />
-          <img src="logo.jpg" alt="logo" className="w-[20vw]" />
-          <div className="texts">
-            <SparklesText text="The Sketch Pad" className="text-slate-900" />
-            <p className="w-[50vw] font-bold text-lg text-slate-800 mt-2">Welcome to my portfolio! The Sketch Pad showcases my entire body of work, allowing you to explore my previous sketches and illustrations. You can also commission me to create a custom sketch just for you.</p>
+          <img src="logo.jpg" alt="logo" className="w-[50vw] md:w-[20vw]" />
+          <div className="texts flex flex-col justify-center items-center">
+            <SparklesText text="The Sketch Pad" className="text-slate-900 text-3xl md:text-5xl" />
+            <p className="w-[90vw] md:w-[50vw] font-bold text-lg text-slate-800 mt-2">Welcome to my portfolio! The Sketch Pad showcases my entire body of work, allowing you to explore my previous sketches and illustrations. You can also commission me to create a custom sketch just for you.</p>
           </div>
         </div>
+      </div>
+      <div className="comtainer w-[90vw] md:w-[95vw] flex flex-col justify-center items-center mx-auto">
+        <SparklesText text="My Work" className="text-slate-900 text-3xl md:text-5xl mb-10" />
         <div className="flex flex-wrap -m-4">
           <div className="lg:w-1/3 sm:w-1/2 p-4">
             <div className="flex relative">

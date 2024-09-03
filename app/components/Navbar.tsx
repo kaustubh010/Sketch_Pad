@@ -6,7 +6,7 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export function Navbar() {
   return (
-    <div className="sticky top-4 z-50">
+    <div className="sticky top-6 z-50">
       <Dock direction="middle">
         <DockIcon>
           <Icons.gitHub className="size-6" />
