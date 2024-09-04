@@ -1,13 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
 import SparklesText from "@/components/magicui/sparkles-text";
-import Meteors from "@/components/magicui/meteors";
+import { cn } from "@/lib/utils";
+import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
 
 export default function Home() {
   return (
     <section className="text-gray-600 body-font">
       <div className="container mx-auto">
+      <AnimatedGridPattern
+        numSquares={30}
+        maxOpacity={0.5}
+        duration={3}
+        repeatDelay={1}
+        className={cn(
+          "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
+        )}
+      />
         <div className="flex flex-col space-x-5 items-center justify-center -mt-16 text-center w-full h-[100vh]">
-          <Meteors number={50} />
           <img src="logo.jpg" alt="logo" className="w-[50vw] md:w-[20vw]" />
           <div className="texts flex flex-col justify-center items-center">
             <SparklesText text="The Sketch Pad" className="text-slate-900 text-3xl md:text-5xl" />
