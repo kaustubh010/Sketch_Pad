@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 import { Dock, DockIcon } from "@/components/magicui/dock";
@@ -9,16 +10,16 @@ export function Navbar() {
     <div className="sticky top-6 z-50">
       <Dock direction="middle">
         <DockIcon>
+          <img src="/instagram.png" className="size-6" alt="instagram" />
+        </DockIcon>
+        <DockIcon>
+          <img src="/youtube.png" className="size-6" alt="youtube" />
+        </DockIcon>
+        <DockIcon>
+          <img src="/facebook.png" className="size-6" alt="facebook" />
+        </DockIcon>
+        <DockIcon>
           <Icons.gitHub className="size-6" />
-        </DockIcon>
-        <DockIcon>
-          <Icons.googleDrive className="size-6" />
-        </DockIcon>
-        <DockIcon>
-          <Icons.notion className="size-6" />
-        </DockIcon>
-        <DockIcon>
-          <Icons.whatsapp className="size-6" />
         </DockIcon>
       </Dock>
     </div>
