@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "./components/Navbar";
+import { Navbar } from "./components/Navbar.js";
 
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400"] });
 
@@ -21,6 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta name="google-signin-client_id" content={process.env.CLIENT_ID}></meta>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
       <body className={ubuntu.className}>
         <Navbar />
         {children}
