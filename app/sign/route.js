@@ -3,7 +3,7 @@ import User from "../../models/User";
 import connectDb from "../../middleware/mongoose";
 var CryptoJS = require("crypto-js");
 
-export async function POST(request: { json: () => any; }) {
+export async function POST(request) {
     await connectDb();
     const body = await request.json();
     let user = await User.findOne({"email": body.email});
