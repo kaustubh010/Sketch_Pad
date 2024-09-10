@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export function Navbar() {
   return (
-    <nav className="sticky top-4 z-50 flex flex-row justify-between items-start w-full">
+    <nav className="sticky top-2 z-50 flex flex-row justify-between items-start w-full">
       <div className="ml-4">
         <Dock distance={0} direction="middle">
           <DockIcon>
